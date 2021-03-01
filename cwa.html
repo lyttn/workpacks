@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Workpacks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <aside>
+            <div class="company">
+                <div><img src="img/workpacks.jpg" alt=""/></div>
+                <div> <h1>WORK PACKS</h1><h6 id="today"></h6></div>
+            </div>
+            <div class="user">
+                <button class="dropdown-btn" onclick="onUser();">
+                    <img src="img/user.jpg" />&nbsp;Station 88
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="#">Hồ sơ</a>
+                    <a href="#">Đăng xuất</a>
+                </div>
+            </div>
+            <div class="aside_menu">
+                <a href=""><i class="fas fa-dungeon"></i> Dashboard</a>
+                <a href=""><i class="far fa-calendar-alt"></i> Projects</a>
+                <a href=""><i class="fas fa-shield-alt"></i> Scope</a>
+                <a href=""><i class="fas fa-dice-d6"></i> CWAs</a>
+                <a href=""><i class="fas fa-solar-panel"></i> CWPs</a>
+                <a href=""><i class="fas fa-broadcast-tower"></i> IWPs</a>
+                <a href=""><i class="fas fa-drafting-compass"></i> Engineering</a>	
+            </div>
+        </aside>
+        <main>
+            
+            <!-- fas fa-user-alt-->
+            <div class="row">
+                <div class="content-top">
+                    <div><div>&#8942;</div></div>
+                    <div>CWAs</div>
+                    <div>
+                        <select>
+                            <option>SS-Simple List</option>
+                            <option>F-List</option>
+                        </select>
+                        <button>1D View</button>&nbsp;
+                        <button>2D View</button>&nbsp;
+                        <button>3D View</button>
+                    </div>
+                    <div><i class="fas fa-user-alt"></i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset>
+                        <legend><i class="far fa-clipboard"></i></legend>
+                        <div>CWA List</div>
+                <table id="cwaList">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">CWA<i class="material-icons">unfold_more</i></th>
+                            <th onclick="sortTable(1)">Picture<i class="material-icons">unfold_more</i></th>
+                            <th onclick="sortTable(2)">Name<i class="material-icons">unfold_more</i></th>
+                            <th onclick="sortTable(3)">Work Scope Summary<i class="material-icons">unfold_more</i></th>
+                            <th onclick="sortTable(4)">Status<i class="material-icons">unfold_more</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CWA Tank-A</td>
+                            <td><img src="img/cwa01.jpg" alt=""/></td>
+                            <td>North Pipe Rack</td>
+                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,...</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>CWA Tank-B</td>
+                            <td><img src="img/cwa02.jpg" alt=""/></td>
+                            <td>East-West Pipe Bridge</td>
+                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,...</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>CWA Tank-C</td>
+                            <td><img src="img/cwa03.jpg" alt=""/></td>
+                            <td>South Pipe Rack</td>
+                            <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,...</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            </div>
+            </div>
+        </main>
+    </section>
+    <footer></footer>
+</body>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="js/script.js">
+    
+</script>
+
+</html>

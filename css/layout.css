@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: workPackTitle;
+    src: url('../font/Roboto-Light.ttf');
+    font-weight: 400;
+}
+@font-face{
+    font-family: fontContent;
+    src: url('../font/Roboto-Light.ttf');
+}
+body{
+    background-color: #DCDCDC;
+    font-family: fontContent;
+}
+section{
+    display: -webkit-flex;
+    display: flex;
+}
+aside{
+    -webkit-webkit: flex 1;
+    -moz-webkit: flex 1;
+    -ms-webkit: flex 1;
+    -o-webkit: flex 1;
+    flex: 1;
+    background-color: ghostwhite;
+    box-shadow: 5px 5px 3px rgb(204, 185, 221) ;
+}
+main{
+    -webkit-webkit: flex 3;
+    -moz-webkit: flex 3;
+    -ms-webkit: flex 3;
+    -o-webkit: flex 3;
+    flex: 3;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+}
+.company{
+    font-family: workPackTitle;
+    display: flex;
+    padding-top: 10px;
+}
+.company>div:nth-of-type(1){
+    flex: 1;
+    text-align: right;
+}
+.company>div:nth-of-type(2){
+    flex: 4;
+    text-align: left;
+}
+.company h1,h6{
+    padding: 0px;
+    margin: 0px;
+}
+.user img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+    box-shadow: 2px 2px 3px gray;
+}
+aside a, .dropdown-btn{
+    display: block;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-size: 20px;
+    padding: 6px 8px 6px 16px;
+    outline: none;
+    color: #818181;
+}
+.dropdown-btn i{
+    float: right;
+}
+aside a:hover, .dropdown-btn:hover{
+    color:plum;
+    outline: none;
+}
+.dropdown-container{
+    display: none;
+    background-color:lightgrey;
+}
+
+.active{
+    background-color: green;
+    color:white;
+}
+.aside_menu{
+    padding-top: 30px;
+    background-color: inherit;
+}
+.aside_menu a{
+    display: block;
+    padding: 15px 15px;
+    margin-left: 15px;
+    width: 90%;
+    
+}
+.aside_menu a:hover{
+    box-shadow: 3px 3px 2px plum;
+    border-radius: 5px;
+    background-color: royalblue;
+}
+
+#cwaList>tr{
+    height: 5em;
+}
+th{
+    border-bottom: 1px solid gray;
+    
+}
+td{
+    text-align: center;
+}
+table#cwaList>th:hover{
+    cursor: pointer;
+}
+table#cwaList>td:nth-child(1){
+    width: 15%;
+}
+table#cwaList td:nth-child(2){
+    width: 15%;
+}
+table#cwaList td:nth-child(3){
+    width: 15%;
+}
+table#cwaList td:nth-child(4){
+    width: 40%;
+    text-align: left;
+}
+table#cwaList td:nth-child(5){
+    width: 15%;
+}
+th>i{
+    vertical-align: text-bottom;
+}
+tbody tr:nth-child(odd){
+    background-color: lightgrey;
+}
+table > div{
+    width:100px;
+    height: 100px;
+    position: absolute;
+    top: - 50px;
+    left: 20px;
+    background-color: purple;
+}
+
+.content-top{
+    display: flex;
+}
+.content-top>div:nth-of-type(1){
+    flex-grow: 1;    
+}
+.content-top>div>div{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px gray;
+    background-color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.content-top>div:nth-of-type(2){
+    flex-grow: 1;
+}
+.content-top>div:nth-of-type(3){
+    flex-grow: 4;
+}
+.content-top>div:nth-of-type(4){
+    flex-grow: 1;
+    text-align: right;
+}
+.row{
+    margin-top: 15px;
+}
+button{
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+    border:none;
+    height: 2em;
+    
+}
+button:hover{
+    background-color: blue;
+    color:white;
+}
+select{
+    border-style: solid none;
+    height: 2em;
+}
+fieldset{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px plum;
+}
+#mainContent legend{
+    width: 60px;
+    height: 70px;
+    background-color: purple;
+    background-image: linear-gradient(to bottom right,purple,white);
+    color: white;
+    box-shadow: 5px 5px 10px plum;
+    font-size: 30px;
+    border-radius: 3px;
+    padding: 10px 5px 30px 20px;
+    
+}
+fieldset{
+    position: relative;
+}
+fieldset>div{
+    position: absolute;
+    top: 50px;
+    left: 90px;
+}
+table#iwpList{
+    width: 100%;
+}
+/***
+đặt menu con
+*/
+.menu{
+    background-color: #ffffff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 1px 1px 10px #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.menu-title{
+    font-weight: bolder;
+}
+.menu-divider{
+    border-bottom: 1px solid #eeeeee;
+}
+.menu-item{
+    height: 30px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+.menu-item:hover{
+    background-color: #f8f8f8;
+}
+
+#editTableOfContents legend{
+    background-color: orangered; 
+    font-size: 15px;
+    color: white;
+    box-shadow: 5px 5px 10px #f8f8f8;
+    border-radius: 3px;
+    padding: 5px 2px 15px 10px;
+}
+fieldset#editTableOfContents{
+    display: none;
+}
+.close{
+    float: right;   
+}
+.close:hover, .close:focus{
+    cursor: pointer;
+}
+table#editTableOfContentsBody{
+    width: 100%;
+}

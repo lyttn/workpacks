@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.menu{
+    background-color: #ffffff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 1px 1px 10px #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.menu-title{
+    font-weight: bolder;
+}
+.menu-divider{
+    border-bottom: 1px solid #eeeeee;
+}
+.menu-item{
+    height: 30px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+.menu-item:hover{
+    background-color: #f8f8f8;
+}
+</style>
+</head>
+<body>
+
+  <div class="menu">
+    <div class="menu-title">IWP 5120557156-QF-003</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item">View IWP in VCM</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item">View IWP in 2D Plan</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item">View Assembled IWP</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item">Review IWP ContentsC</div>
+</div>
+
+</body>
+<script>
+  const cm = document.querySelector('.menu');
+  function showContextMenu(show = true){
+    cm.style.display = show ? 'block' : 'none';
+}
+
+window.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    console.log(e);
+    showContextMenu();
+    cm.style.top = e.y + 'px';
+    cm.style.left = e.x + 'px';
+
+
+});
+
+window.addEventListener('click',() => {
+    showContextMenu(false);
+});
+</script>
+</html>

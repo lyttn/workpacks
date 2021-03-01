@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Workpacks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <aside>
+            <div class="company">
+                <div><img src="img/workpacks.jpg" alt=""/></div>
+                <div> <h1>WORK PACKS</h1><h6 id="today"></h6></div>
+            </div>
+            <div class="user">
+                <button class="dropdown-btn" onclick="onUser();">
+                    <img src="img/user.jpg" />&nbsp;Station 88
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="#">Hồ sơ</a>
+                    <a href="#">Đăng xuất</a>
+                </div>
+            </div>
+            <div class="aside_menu">
+                <a href=""><i class="fas fa-dungeon"></i> Dashboard</a>
+                <a href=""><i class="far fa-calendar-alt"></i> Projects</a>
+                <a href=""><i class="fas fa-shield-alt"></i> Scope</a>
+                <a href=""><i class="fas fa-dice-d6"></i> CWAs</a>
+                <a href=""><i class="fas fa-solar-panel"></i> CWPs</a>
+                <a href=""><i class="fas fa-broadcast-tower"></i> IWPs</a>
+                <a href=""><i class="fas fa-drafting-compass"></i> Engineering</a>	
+            </div>
+        </aside>
+        <main>
+            
+            <!-- fas fa-user-alt-->
+            <div class="row">
+                <div class="content-top">
+                    <div><div>&#8942;</div></div>
+                    <div>IWPs</div>
+                    <div>
+                        <select>
+                            <option>512000000-QF</option>
+                            <option>612000000-AF</option>
+                        </select>
+                        <button>1D View</button>&nbsp;
+                        <button>2D View</button>&nbsp;
+                        <button>3D View</button>
+                    </div>
+                    <div><i class="fas fa-user-alt"></i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset id="mainContent">
+                        <legend><i class="fas fa-broadcast-tower"></i></legend>
+                        <div>IWPs List</div>
+                        <table id="iwpList">
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>IWP</th>
+                                    <th>Drawings</th>
+                                    <th>BOM/MTO</th>
+                                    <th>Model Se</th>
+                                    <th>References</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="far fa-square"></i></td>
+                                    <td>512000000-QF-001</td>
+                                    <td><input type="checkbox" value="" name="drawings01"></td>
+                                    <td><input type="checkbox" value="" name="drawings02"></td>
+                                    <td><input type="checkbox" value="" name="drawings03"></td>
+                                    <td><input type="checkbox" value="" name="drawings04"></td>
+                                    <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="far fa-square"></i></td>
+                                    <td>512000000-QF-002</td>
+                                    <td><input type="checkbox" value="" name="drawings01"></td>
+                                    <td><input type="checkbox" value="" name="drawings02"></td>
+                                    <td><input type="checkbox" value="" name="drawings03"></td>
+                                    <td><input type="checkbox" value="" name="drawings04"></td>
+                                    <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="far fa-square"></i></td>
+                                    <td>512000000-QF-003</td>
+                                    <td><input type="checkbox" value="" name="drawings01"></td>
+                                    <td><input type="checkbox" value="" name="drawings02"></td>
+                                    <td><input type="checkbox" value="" name="drawings03"></td>
+                                    <td><input type="checkbox" value="" name="drawings04"></td>
+                                    <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                <div class="menu">
+                      <div class="menu-title">IWP 5120557156-QF-003</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item">View IWP in VCM</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item">View IWP in 2D Plan</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item">View Assembled IWP</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item">Review IWP ContentsC</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item" onclick="showTableOfContentIWP(true)">Edit Table of Contents</div>
+                      <div class="menu-divider"></div>
+                      <div class="menu-item">Open Folder Location</div>
+                </div>
+            </fieldset>
+            </div>
+            </div>
+            <fieldset id="editTableOfContents">
+                <legend>Table of Contents - IWP 512000000-QF-003</legend>
+                <i class="fas fa-times-circle close" style="color:red" onclick="showTableOfContentIWP(false)"></i>
+                <table id="editTableOfContentsBody">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Label</th>
+                            <th>IWP Template Section</th>
+                            <th>Complete</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>A</td>
+                            <td>Cover Page</td>
+                            <td>01-01_Cover Detail Dual</td>
+                            <td><input type="checkbox"/></td>
+                            <td><span onclick="insertNewRow()"><i class="fas fa-plus-circle" style="color: green;"></i></span>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-up" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-down" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-times" style="color:red"></i></a>&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Cover Page</td>
+                            <td>01-01_Cover Detail Dual</td>
+                            <td><input type="checkbox"/></td>
+                            <td><span onclick="insertNewRow()"><i class="fas fa-plus-circle" style="color: green;"></i></span>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-up" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-down" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-times" style="color:red"></i></a>&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Cover Page</td>
+                            <td>01-01_Cover Detail Dual</td>
+                            <td><input type="checkbox"/></td>
+                            <td><span onclick="insertNewRow()"><i class="fas fa-plus-circle" style="color: green;"></i></span>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-up" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-down" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-times" style="color:red"></i></a>&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Cover Page</td>
+                            <td>01-01_Cover Detail Dual</td>
+                            <td><input type="checkbox"/></td>
+                            <td><span onclick="insertNewRow()"><i class="fas fa-plus-circle" style="color: green;"></i></span>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-up" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-down" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-times" style="color:red"></i></a>&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Cover Page</td>
+                            <td>01-01_Cover Detail Dual</td>
+                            <td><input type="checkbox"/></td>
+                            <td><span onclick="insertNewRow()"><i class="fas fa-plus-circle" style="color: green;"></i></span>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-up" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-long-arrow-alt-down" style="color: green;"></i></a>&nbsp;&nbsp;<a href=""><i class="fas fa-times" style="color:red"></i></a>&nbsp;&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </main>
+    </section>
+    <footer></footer>
+</body>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="js/script.js">
+</script>
+
+</html>

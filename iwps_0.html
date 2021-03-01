@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/iwps_layout.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <aside></aside>
+        <main>
+            <div class="row">
+                <div class="col">
+                    <div class="content-top">
+                        <div>
+                            <div>&#8942;</div>
+                        </div>
+                        <div>IWPs</div>
+                        <div>
+                            <select>
+                                <option>512000000-QF</option>
+                                <option>612000000-AF</option>
+                            </select>
+                            <button>1D View</button>&nbsp;
+                            <button>2D View</button>&nbsp;
+                            <button>3D View</button>
+                        </div>
+                        <div><i class="fas fa-user-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <fieldset id="mainContent">
+                    <legend><i class="fas fa-broadcast-tower"></i></legend>
+                    <div>IWPs List</div>
+                <table id="iwpList">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>IWP</th>
+                            <th>Drawings</th>
+                            <th>BOM/MTO</th>
+                            <th>Model Se</th>
+                            <th>References</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="far fa-square"></i></td>
+                            <td>512000000-QF-001</td>
+                            <td><input type="checkbox" value="" name="drawings01"></td>
+                            <td><input type="checkbox" value="" name="drawings02"></td>
+                            <td><input type="checkbox" value="" name="drawings03"></td>
+                            <td><input type="checkbox" value="" name="drawings04"></td>
+                            <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-square"></i></td>
+                            <td>512000000-QF-002</td>
+                            <td><input type="checkbox" value="" name="drawings01"></td>
+                            <td><input type="checkbox" value="" name="drawings02"></td>
+                            <td><input type="checkbox" value="" name="drawings03"></td>
+                            <td><input type="checkbox" value="" name="drawings04"></td>
+                            <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-square"></i></td>
+                            <td>512000000-QF-003</td>
+                            <td><input type="checkbox" value="" name="drawings01"></td>
+                            <td><input type="checkbox" value="" name="drawings02"></td>
+                            <td><input type="checkbox" value="" name="drawings03"></td>
+                            <td><input type="checkbox" value="" name="drawings04"></td>
+                            <td><i class="fas fa-trash-alt" style="color: blue;"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="menu">
+                    <div class="menu-title">IWP 5120557156-QF-003</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">View IWP in VCM</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">View IWP in 2D Plan</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">View Assembled IWP</div>
+                    <div class="menu-divider"></div>
+                    <div class="menu-item">Review IWP ContentsC</div>
+                </div>
+                </fieldset>
+            </div>
+            </div>
+        </main>
+    </section>
+</body>
+<script>
+    const cm = document.querySelector('.menu');
+    function showContextMenu(show = true) {
+        cm.style.display = show ? 'block' : 'none';
+    }
+
+    window.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        console.log(e);
+        showContextMenu();
+        cm.style.top = e.y + 'px';
+        cm.style.left = e.x + 'px';
+
+
+    });
+
+    window.addEventListener('click', () => {
+        showContextMenu(false);
+    });
+</script>
+
+</html>
